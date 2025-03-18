@@ -34,8 +34,8 @@
 
 
 import React, { useEffect, useState } from 'react';
-import { View, FlatList, Button, StyleSheet } from 'react-native';
-import { useTVEventHandler } from 'react-native-tvos';
+import { View, FlatList, Button, StyleSheet, } from 'react-native';
+import { TVEventHandler } from 'react-native'
 import axios from 'axios';
 import { LRUCache } from 'lru-cache';
 import { NavigationProp } from '@react-navigation/native'; // Import NavigationProp
@@ -78,13 +78,19 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
 
   
   // Handle remote control events
-  useTVEventHandler((evt: { eventType: string; }) => {
-    if (evt.eventType === 'up') {
-      console.log('Up button pressed');
-    } else if (evt.eventType === 'down') {
-      console.log('Down button pressed');
-    }
-  });
+  useEffect(() => {
+    const tvEventHandler = new TVEventHandler();
+    tvEventHandler.enable(null, (_, evt) => {
+      if (evt.eventType === 'up') {
+        console.log('Up button pressed');
+      } else if (evt.eventType === 'down') {
+        console.log('Down button pressed');
+      }
+    });
+
+    return () => tvEventHandler.disable();
+  }, []);
+
 
   return (
     <View style={styles.container}>
