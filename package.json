@@ -1,5 +1,5 @@
 {
-  "name": "FirestickStreamingApp",
+  "name": "firestickstreamingapp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,15 +10,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "@react-navigation/native": "^7.0.15",
-    "@react-navigation/stack": "^7.1.2",
     "@types/react-native": "^0.72.8",
     "axios": "^1.8.3",
     "fast-glob": "^3.3.3",
     "glob": "^11.0.1",
     "lru-cache": "^11.0.2",
     "react": "19.0.0",
-    "react-native": "^0.78.0",
     "react-native-gesture-handler": "^2.24.0",
     "react-native-get-random-values": "^1.11.0",
     "react-native-reanimated": "^3.17.1",
@@ -52,5 +49,19 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "description": "This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Boy-Dre/BlueHive.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/The-Boy-Dre/BlueHive/issues"
+  },
+  "homepage": "https://github.com/The-Boy-Dre/BlueHive#readme"
 }
