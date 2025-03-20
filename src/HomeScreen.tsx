@@ -34,8 +34,7 @@
 
 
 import React, { useEffect, useState } from 'react';
-import { View, FlatList, Button, StyleSheet, } from 'react-native';
-import { TVEventHandler } from 'react-native'
+import { View, FlatList, Button, StyleSheet, useTVEventHandler} from 'react-native-tvos';
 import axios from 'axios';
 import { LRUCache } from 'lru-cache';
 import { NavigationProp } from '@react-navigation/native'; // Import NavigationProp
